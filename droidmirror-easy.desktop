@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=DroidMirror Easy
+Comment=Scan a QR to mirror your Android screen wirelessly (scrcpy GUI)
+Exec=__BIN__/droidmirror-easy
+Icon=phone
+Terminal=false
+Categories=Utility;Network;Qt;
+StartupNotify=true

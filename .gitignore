@@ -1,0 +1,7 @@
+# Build artifacts
+Makefile
+.qmake.stash
+*.o
+moc_*.cpp
+moc_predefs.h
+droidmirror-easy
