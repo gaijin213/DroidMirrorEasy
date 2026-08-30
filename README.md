@@ -1,5 +1,8 @@
 # DroidMirror Easy
 
+<img width="444" height="982" alt="MirrorDroid" src="https://github.com/user-attachments/assets/6532f6df-f251-49e7-b857-9f5f796a10a2" />
+
+
 **Mirror your Android phone on your Linux screen — wirelessly, no typing, no cables.**
 Scan a QR code with your phone, press a button, and your screen is mirrored. You also get
 desktop notifications for calls, texts and every app on your phone.
