@@ -81,67 +81,6 @@ Phone needs **Android 11 or newer** and must be on the **same Wi-Fi** as your PC
   - scrcpy opens its own window. Check the taskbar. Or open a terminal and run
     `scrcpy --serial <device>` to see the exact error.
 
----
-
-## Requirements
-
-You normally never need to read this — the installer handles it. But here's the list:
-
-| Needed to run | What for |
-|---|---|
-| Qt6 (libs) | the app's window/buttons |
-| `scrcpy` | the actual screen mirroring |
-| `qrencode` | drawing the QR code |
-| `adb` (Google platform-tools) | talking to your phone over Wi-Fi |
-
-That's it. No Python, no Node, no Electron.
-
----
-
-## Build from source (advanced)
-
-Only needed if you're a developer or your distro is unusual.
-
-```bash
-git clone https://github.com/gaijin213/DroidMirrorEasy.git
-cd DroidMirrorEasy
-./install.sh --source
-```
-
-Install from the release binary only:
-
-```bash
-mkdir -p ~/.local/bin
-curl -fSL -o ~/.local/bin/droidmirror-easy \
-  https://github.com/gaijin213/DroidMirrorEasy/releases/latest/download/droidmirror-easy-linux-x86_64
-chmod +x ~/.local/bin/droidmirror-easy
-```
-
-Verify the installer is healthy without changing anything:
-
-```bash
-./install.sh --check
-```
-
----
-
-## Project layout
-
-```
-DroidMirrorEasy/
-├─ droidmirror.pro               # qmake project — Qt6 Widgets + D-Bus, C++17
-├─ droidmirror-easy.desktop      # app-menu entry
-├─ install.sh                    # noob installer: prebuilt binary + deps, source fallback
-└─ src/
-   ├─ main.cpp                   # app entry point
-   ├─ mainwindow.h/.cpp          # UI: QR tab, Advanced tab, settings, notifications
-   ├─ adbmanager.h/.cpp          # talks to adb (devices, mDNS, pair, connect)
-   ├─ mirrorlauncher.h/.cpp      # starts scrcpy
-   ├─ qrpairer.h/.cpp            # makes the QR code + auto-pairs
-   └─ notificationwatcher.h/.cpp # forwards phone notifications to your desktop
-```
-
----
 
 ## How it works (5-minute version)
 
@@ -157,12 +96,6 @@ DroidMirrorEasy/
 
 That's the whole trick — scrcpy + adb already do the heavy lifting; this app makes it a
 one-scan experience and adds notifications.
-
----
-
-## Windows
-
-Planned. The Windows version will bundle everything and use native toasts. Not done yet.
 
 ---
 
